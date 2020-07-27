@@ -53,3 +53,15 @@ O GitHub Packages é um registro de pacotes do próprio github ele nos permite p
 ## Vamos a prática e a demonstração
 
 https://github.com/FieldControl/blackspeech
+
+## Configurações para usar pates privados do github packages
+
+- Crie um token de acesso **com a permissão `read:packages`**
+voce pode seguir esses passos para encontrar a onde criar o token:
+https://docs.github.com/pt/github/authenticating-to-github/creating-a-personal-access-token
+
+- Configurando npm
+crie ou altere o arquivo `.npmrc` dentro da **home do seu usuário**
+adicionando a seguinte linha `//npm.pkg.github.com/._authToken=SEU_TOKEN_AQUI`
+
+- Dentro do projeto que for usar o pacote crie ou altere o arquivo `.npmrc` adicionando a seguinte linha `registry=https://npm.pkg.github.com/FieldControl`
